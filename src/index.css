@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-maroon: #781C1C;
+  --color-brand-burgundy: #941F24;
+  --color-brand-brick: #B52B25;
+  --color-brand-blush: #F8E9E7;
+  --color-brand-blush-light: #FDF6F5;
+  --color-brand-warmwhite: #FFFCFA;
+  --color-brand-charcoal: #202124;
+  --color-brand-muted: #777777;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', 'Manrope', -apple-system, sans-serif;
+  --font-display: 'Manrope', 'Plus Jakarta Sans', sans-serif;
+
+  --radius-card: 18px;
+  --radius-card-sm: 14px;
+  --radius-card-lg: 22px;
+}
+
+@layer base {
+  * {
+    border-color: #F0E6E4;
+  }
+
+  body {
+    background-color: var(--color-brand-warmwhite);
+    color: var(--color-brand-charcoal);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFCFA;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9BEBA;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #941F24;
+}
+
+/* Diagonal ribbon divider shape */
+.clip-angled-banner {
+  clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.clip-hero-badge {
+  clip-path: polygon(0% 0%, 100% 0%, 88% 100%, 0% 100%);
+}
